@@ -1,0 +1,39 @@
+:root {
+  /* Surface */
+  --bg: #05060b;
+  --ink: #edeff7;
+  --ink-2: #b4b9cc;
+  --muted: #8a8fa5;
+  --line: rgba(255, 255, 255, 0.09);
+
+  /* Accent: cool → violet → warm, matching the point field */
+  --a1: #6aa8ff;
+  --a2: #b48cff;
+  --a3: #ff9f7a;
+  --grad: linear-gradient(100deg, var(--a1), var(--a2) 55%, var(--a3));
+
+  /* Glass */
+  --glass: rgba(16, 18, 30, 0.55);
+  --glass-edge: rgba(255, 255, 255, 0.15);
+  --glass-blur: 18px;
+
+  /* Motion — keep in sync with src/motion/tokens.ts */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* Type */
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Layout */
+  --gutter: clamp(20px, 5vw, 64px);
+  --maxw: 1180px;
+  --radius: 20px;
+  --nav-h: 64px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --glass-blur: 10px; /* backdrop blur over a live canvas is the costly bit on phones */
+  }
+}
